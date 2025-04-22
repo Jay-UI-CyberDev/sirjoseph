@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Agency building web and mobile apps for small businesses" />
+  <title>Digital Solutions Agency</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="logo">JustUs-Tech</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="head-1">
+    <h1>We Build Digital Solutions</h1>
+    <p>Web & Mobile Apps for Small Businesses</p>
+    <div class="btn-group">
+      <a href="#contact"><button class="btn-1">Request a Quote</button></a>
+      <a href="#services"><button class="btn-2">View Portfolio</button></a>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="OIP.jpg" alt="Web App Development" />
+        <h3>Web App Development</h3>
+        <p>Custom web apps tailored to your business needs.</p>
+      </div>
+      <div class="card">
+        <img src="OIP (1).jpg" alt="Mobile App Development" />
+        <h3>Mobile App Development</h3>
+        <p>iOS & Android applications built to scale and perform.</p>
+      </div>
+      <div class="card">
+        <img src="OIP (2).jpg" alt="UI/UX Design" />
+        <h3>UI/UX Design</h3>
+        <p>Engaging and user-friendly designs that convert.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Ready to Build Something Great?</h2>
+    <p>Let's discuss your project and how we can help you grow.</p>
+    <a href="#contact"><button class="btn-1">Get in Touch</button></a>
+  </section>
+
+  <section id="team" class="team">
+    <h2>Meet The Team</h2>
+    <div class="main-container">
+      <div class="cards"><img src="OIP.jpg" alt="Akachukwu Osuka" /><h3>Akachukwu Osuka</h3></div>
+      <div class="cards"><img src="OIP (1).jpg" alt="Vashti Daniella" /><h3>Vashti Daniella</h3></div>
+      <div class="cards"><img src="OIP (2).jpg" alt="Williams Morrison" /><h3>Williams Morrison</h3></div>
+      <div class="cards"><img src="WhatsApp Image 2025-04-22 at 23.01.07_d3c75a6f.jpg" alt="Samuel Ofosu" /><h3>Samuel Ofosu</h3></div>
+      <div class="cards"><img src="OIP (1).jpg" alt="Richmond Agbenyefia" /><h3>Richmond Agbenyefia</h3></div>
+      <div class="cards"><img src="OIP (2).jpg" alt="Jeremy Yankson" /><h3>Jeremy Yankson</h3></div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 style="text-align:center; margin-bottom:2rem;">Contact Us</h2>
+    <form onsubmit="event.preventDefault(); alert('Message submitted! We will get back to you shortly.');">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer_options">
+      <div class="quick_links">
+        <h4>Quick Links</h4>
+        <ul class="ul_1">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="social_medialinks">
+        <h4>Follow Us</h4>
+        <div class="social_icons">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+      <div class="contact_us">
+        <h4>Contact Us</h4>
+        <ul class="ul_1">
+          <li>Email: justus.tech@gmail.com</li>
+          <li>Phone: +233 260 555 507</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; 2025 Justus Tech. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    // Highlight current nav link on scroll
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('nav ul li a');
+
+    window.onscroll = () => {
+      let current = '';
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 100;
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach((link) => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    };
+  </script>
+</body>
+</html>
