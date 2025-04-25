@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Team's Porfolios</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /><i></i>
+</head>
+<body>
+    <header class="nav">
+        <div class="logo">JustUs-Tech</div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Portfolio</a></li>
+          </ul>
+        </nav>
+      </header>
+
+    <section id="portfolio" class="portfolio">
+        <h2>Meet The Team</h2>
+        <div class="main-container">
+          <div class="cards">
+            <img src="Screenshot_25-4-2025_111634_pearson4.vercel.app.jpeg" alt="morrison's pearson" />
+            <h3><a href="https://pearson4.vercel.app/">Click Me</a></h3>
+        </div>
+          <div class="cards">
+            <img src="WhatsApp Image 2025-04-23 at 13.24.52_5133562b.jpg" alt="Vashti's pearson" />
+            <h3></h3></div>
+          <div class="cards">
+            <img src="WhatsApp Image 2025-04-22 at 22.36.38_51e0931a.jpg" alt="chuc's pearson" /><h3>Williams Morrison</h3></div>
+          <div class="cards">
+            <img src="WhatsApp Image 2025-04-22 at 23.01.07_d3c75a6f.jpg" alt="Samuel's pearson" />
+            <h3>Samuel Ofosu</h3>
+          </div>
+          <div class="cards">
+            <img src="OIP (1).jpg" alt="Richmond Agbenyefia" />
+            <h3>Richmond Agbenyefia</h3>
+          </div>
+          <div class="cards">
+            <img src="OIP (2).jpg" alt="Jeremy Yankson" />
+            <h3>Jeremy Yankson</h3>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer_options">
+          <div class="quick_links">
+            <h4>Quick Links</h4>
+            <ul class="ul_1">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="social_medialinks">
+            <h4>Follow Us</h4>
+            <div class="social_icons">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+          </div>
+          <div class="contact_us">
+            <h4>Contact Us</h4>
+            <ul class="ul_1">
+              <li>Email: justus.tech@gmail.com</li>
+              <li>Phone: +233 260 555 507</li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">
+          &copy; 2025 Justus Tech. All rights reserved.
+        </div>
+      </footer>
+
+      <script>
+        // Highlight current nav link on scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav ul li a');
+    
+        window.onscroll = () => {
+          let current = '';
+    
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop - 100;
+            if (pageYOffset >= sectionTop) {
+              current = section.getAttribute('id');
+            }
+          });
+    
+          navLinks.forEach((link) => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + current) {
+              link.classList.add('active');
+            }
+          });
+        };
+      </script>
+</body>
+</html>
